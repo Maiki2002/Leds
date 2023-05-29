@@ -39,7 +39,31 @@ Identificamos que puertos se les asignará a cada uno:
 La siguiente parte del codigo es la lógica que llevará el programa llamado loop:
 
 Creamos un archivo MakeFile para enlazar las funciones externas de:
-main1.s ivt.s default_handler.s reset_handler.s delay.s read_button.s output.s digital_read.s
+- main1.s 
+- ivt.s 
+- default_handler.s 
+- reset_handler.s 
+- delay.s 
+- read_button.s 
+   +---------+
+   | pin     | r7
+   + --------+
+   | port    | r7 + 4
+   + --------+
+   |         | r7 + 8
+   + --------+
+   | bit     | r7 + 12
+   + --------+
+   | i       | r7 + 16
+   + --------+
+   | counter | r7 + 20
+   + --------+
+   | r7      |
+   + --------+
+   | lr      |
+   + --------+ 
+- output.s 
+- digital_read.s
 
 En el archivo Makefile tenemos las extensiones de los archivo a enlazar en la compilacion:
 - Utilizaremos el comando make para este proceso
