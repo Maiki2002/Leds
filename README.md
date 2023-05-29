@@ -38,6 +38,13 @@ Identificamos que puertos se les asignará a cada uno:
         str     r0, [r7, #8] @ buttonB = 0
 La siguiente parte del codigo es la lógica que llevará el programa llamado loop:
 
+En el archivo Makefile tenemos las extensiones de los archivo a enlazar en la compilacion:
+- Utilizaremos el comando make para este proceso
+- Make write es para escribir en la placxa de desarrollo
+- Make será para enlazar todos los archivos en uno solo
+
+
+#El mapa de conexión de la blue pill en la protoboard:
 
 ![WhatsApp Image 2023-05-29 at 14 07 14](https://github.com/Maiki2002/Leds/assets/105370860/dd3a6409-7fcd-4e79-a52d-38e61aa29954)
 
